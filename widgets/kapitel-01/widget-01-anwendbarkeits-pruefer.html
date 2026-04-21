@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSGVO Anwendbarkeits-Prüfer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #333333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .question-box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #ff6a00;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        #result {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .result-yes {
+            background: #e6fced;
+            color: #0d822a;
+            border: 1px solid #b3eac3;
+        }
+        .result-no {
+            background: #fcebeb;
+            color: #c91a1a;
+            border: 1px solid #f1caca;
+        }
+        .reset-btn {
+            background: #555;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="step-container">
+            <div class="question-box" id="question-text">
+                Werden personenbezogene Daten ganz oder teilweise automatisiert verarbeitet? (Oder in einem Dateisystem gespeichert?)
+            </div>
+            
+            <div class="button-group" id="action-buttons">
+                <button onclick="answer(true)">Ja</button>
+                <button onclick="answer(false)">Nein</button>
+            </div>
+        </div>
+        
+        <div id="result"></div>
+        <button class="reset-btn" id="reset-btn" onclick="reset()" style="display: none;">Neu starten</button>
+    </div>
+    
+    <script>
+        const steps = [
+            {
+                // Step 0
+                q: "Werden personenbezogene Daten ganz oder teilweise automatisiert verarbeitet? (Oder nicht-automatisiert in einem strukturierten Dateisystem gespeichert?)",
+                yes: 1, // go to step 1
+                no: "NO_SACHLICH" 
+            },
+            {
+                // Step 1
+                q: "Hat das verarbeitende Unternehmen eine Niederlassung in der EU?",
+                yes: "YES_NIEDERLASSUNG",
+                no: 2 // go to step 2
+            },
+            {
+                // Step 2
+                q: "Werden Waren/Dienstleistungen für Personen in der EU angeboten oder deren Verhalten in der EU beobachtet?",
+                yes: "YES_MARKTORT",
+                no: "NO_RAEUMLICH"
+            }
+        ];
+
+        let currentStep = 0;
+        
+        const questionText = document.getElementById("question-text");
+        const actionButtons = document.getElementById("action-buttons");
+        const resultBox = document.getElementById("result");
+        const resetBtn = document.getElementById("reset-btn");
+
+        function answer(isYes) {
+            const stepData = steps[currentStep];
+            const nextNode = isYes ? stepData.yes : stepData.no;
+            
+            if (typeof nextNode === "number") {
+                currentStep = nextNode;
+                questionText.textContent = steps[currentStep].q;
+            } else {
+                showResult(nextNode);
+            }
+        }
+
+        function showResult(code) {
+            questionText.style.display = "none";
+            actionButtons.style.display = "none";
+            resultBox.style.display = "block";
+            resetBtn.style.display = "inline-block";
+            
+            if (code === "NO_SACHLICH") {
+                resultBox.className = "result-no";
+                resultBox.innerHTML = "DSGVO nicht anwendbar!<br><span style='font-size: 1rem; font-weight: normal'>Die sachlichen Voraussetzungen (Art. 2 DSGVO) sind nicht erfüllt.</span>";
+            } else if (code === "NO_RAEUMLICH") {
+                resultBox.className = "result-no";
+                resultBox.innerHTML = "DSGVO nicht anwendbar!<br><span style='font-size: 1rem; font-weight: normal'>Die räumlichen Voraussetzungen (Art. 3 DSGVO) fehlen.</span>";
+            } else if (code === "YES_NIEDERLASSUNG") {
+                resultBox.className = "result-yes";
+                resultBox.innerHTML = "DSGVO ist anwendbar!<br><span style='font-size: 1rem; font-weight: normal'>Das Niederlassungsprinzip (Art. 3 Abs. 1 DSGVO) ist erfüllt.</span>";
+            } else if (code === "YES_MARKTORT") {
+                resultBox.className = "result-yes";
+                resultBox.innerHTML = "DSGVO ist anwendbar!<br><span style='font-size: 1rem; font-weight: normal'>Das Marktortprinzip (Art. 3 Abs. 2 DSGVO) greift.</span>";
+            }
+        }
+
+        function reset() {
+            currentStep = 0;
+            questionText.style.display = "flex";
+            actionButtons.style.display = "flex";
+            resultBox.style.display = "none";
+            resetBtn.style.display = "none";
+            questionText.textContent = steps[currentStep].q;
+        }
+    </script>
+</body>
+</html>

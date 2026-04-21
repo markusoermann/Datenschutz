@@ -1,0 +1,124 @@
+---
+title: "Datenschutzrecht"
+subtitle: "Rechtsgrundlagen der Datenverarbeitung"
+date: last-modified
+lang: de
+
+# Autoren-Daten
+author:
+  - name: Prof. Dr. Markus Oermann
+    email: markus.oermann@thws.de
+    role: Dozent
+    affiliation: THWS FIW
+
+# Semester-Daten
+semester: "SoSe 26"
+course: "ELSI und Digitalisierung"
+version: "1.0"
+
+# --- Ausgabe-Formate ---
+format: handout-typst
+---
+
+## Das Prinzip: Verbot mit Erlaubnisvorbehalt
+
+Das Fundament des europäischen Datenschutzes basiert auf einem so simplen wie weitreichenden Prinzip: Jede Verarbeitung personenbezogener Daten ist zunächst einmal verboten. Erst wenn der Verantwortliche eine explizite gesetzliche Erlaubnis – eine sogenannte Rechtsgrundlage – vorweisen kann, wird die Datenverarbeitung zulässig. Dieses System nennen Jurist/-innen "Verbot mit Erlaubnisvorbehalt".
+
+::: {.flip-card}
+#### Verbot mit Erlaubnisvorbehalt
+Grundsätzliche Unzulässigkeit jeder Datenverarbeitung, es sei denn, eine gesetzliche Rechtsgrundlage (nach Art. 6 DSGVO) erlaubt sie ausdrücklich.
+:::
+
+Die relevanten Erlaubnistatbestände finden sich in [Art. 6 Abs. 1 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679). Wenn nur eine der in dieser DSGVO-Vorschrift genannten Bedingungen erfüllt ist, leuchtet die datenschutzrechtliche Ampel grün. 
+
+Es empfiehlt sich ein genauer Blick auf die wichtigsten Rechtsgrundlagen der DSGVO, die in der anwaltlichen und unternehmerischen Praxis eine herausragende Rolle spielen.
+
+::: {.details}
+#### Die zentralen Erlaubnistatbestände im Überblick
+- **Einwilligung (lit. a):** Die betroffene Person hat den Anforderungen entsprechend erklärt, mit der Verarbeitung einverstanden zu sein.
+- **Vertragserfüllung (lit. b):** Die Verarbeitung ist objektiv notwendig, um einen Vertrag zu erfüllen. *Beispiel: Amazon muss Ihre Adresse verarbeiten, um das Paket zu liefern; die Personalabteilung nutzt Ihre Kontodaten für die Gehaltszahlung.*
+- **Rechtliche Verpflichtung (lit. c):** Der Verarbeiter muss ein Gesetz befolgen (z. B. steuerrechtliche Aufbewahrungspflichten).
+- **Schutz lebenswichtiger Interessen (lit. d):** Wenn es sprichwörtlich um Leben und Tod geht (z. B. Übermittlung von Blutgruppendaten an den Notarzt nach einem Unfall).
+- **Aufgabenerfüllung im öffentlichen Interesse (lit. e):** Besonders wichtig für Behörden und staatliche Hochschulen. *Beispiel: Die Nutzung eines Videokonferenzsystems für die Hochschullehre.*
+- **Berechtigtes Interesse (lit. f):** Die Verarbeitung ist zur Wahrung legitimer Interessen eines Unternehmens erforderlich und die Interessen der Betroffenen überwiegen nicht. *Achtung: Auf diese Rechtsgrundlage dürfen sich Behörden in Erfüllung ihrer öffentlichen Aufgaben nicht stützen.*
+:::
+
+In der Fallbearbeitung prüfen Sie stets, welche dieser Grundlagen einschlägig ist. Eine doppelte Absicherung ist dabei weder nötig noch sinnvoll: Eine einzige belastbare Rechtsgrundlage genügt vollauf.
+
+::: {.drag-exercise}
+Das Datenschutzrecht folgt dem Grundsatz des Verbots mit *Erlaubnisvorbehalt*. Die Verarbeitung ist nur legal, wenn mindestens *eine* Bedingung aus Art. 6 DSGVO erfüllt ist. Verträge erfordern oft eine Verarbeitung zur *Vertragserfüllung*, während Unternehmen sich auf ihr *berechtigtes Interesse* stützen können, sofern die Rechte der Betroffenen nicht überwiegen.
+:::
+
+## Die Einwilligung in der Praxis
+
+Die Praxis neigt dazu, die Einwilligung als datenschutzrechtlichen "Freibrief" zu missverstehen. Dabei ist die Einwilligung – verankert in Art. 4 Nr. 11 und [Art. 7 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679) – an strenge Wirksamkeitsvoraussetzungen geknüpft. Wer versucht, Datenschutzprobleme durch pauschales Abnicken zu "heilen", begibt sich auf juristisches Glatteis.
+
+::: {.flip-card}
+#### Einwilligung (Consent)
+Jede freiwillig für den bestimmten Fall, in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung.
+:::
+
+Ein zentraler Pfeiler für eine wirksame Einwilligung ist die Freiwilligkeit. Die betroffene Person muss eine echte, unbeeinflusste Wahl haben. Ist diese Wahl aufgrund eines Machtgefälles eingeschränkt, wie es zum Beispiel im Arbeitsverhältnis zwischen Arbeitgeber und beschäftigter Person anzutreffen ist, gelten extrem strenge Maßstäbe (§ 26 Abs. 2 BDSG). Auch die Koppelung der Einwilligung an den Abschluss eines Vertrags unterminiert die Freiwilligkeit, wenn diese Daten für die Erfüllung des Vertrags gar nicht zwingend notwendig wären (vgl. Art. 7 Abs. 4 DSGVO) - hier ist allerdings vieles strittig.
+
+Darüber hinaus erfordert eine Einwilligung zwingend eine aktive Handlung (Opt-In). Bloßes Stillschweigen, Untätigkeit oder gar vorausgefüllte Kästchen am Ende eines Webseiten-Formulars (Opt-Out) genügen niemals den Anforderungen der DSGVO. Das Einholen einer Zustimmung zur Nutzung von Analysetools wie Google Analytics verlangt dieses aktive Opt-In, lange bevor der erste Datenfluss zum fremden Server in Bewegung gesetzt wird.
+
+Zusätzlich müssen Informiertheit und Bestimmtheit gewahrt bleiben. Betroffene müssen vor der Datenerhebung in einfacher, präziser Sprache verstehen können, wer verarbeitet, was verarbeitet wird und vor allem wozu. Schließlich ist die Widerruflichkeit integraler Bestandteil des Konzepts: Jede rechtswirksame Einwilligung muss von der betroffenen Person jederzeit und so einfach wie die Abgabe widerrufen werden können. Dieser Widerruf wirkt jedoch nur für die Zukunft (ex nunc) und infiziert die bisherige Datenverarbeitung nicht nachträglich mit der Rechtswidrigkeit.
+
+::: {.quick-check}
+Welches Verhalten bei einem Cookie-Banner auf einer Website ist datenschutzrechtlich unzulässig?
+
+- Ein Banner mit einem Button für "Alles akzeptieren" und einem Button für "Alles ablehnen".
+
+- **Ein Banner, das ein vorausgefülltes Kästchen zur Zustimmung enthält oder nur einen "Alles akzeptieren"-Button anbietet, ohne eine einfache Ablehnung auf gleicher Ebene zu ermöglichen.**
+
+- Ein Banner, das den Nutzer detailliert informiert und ihn aktiv seine Präferenzen auswählen lässt (Opt-In).
+
+:::
+
+## Höchste Warnstufe: Besonders sensible Daten
+
+Bestimmte Informationen im Leben eines Menschen sind von Natur aus derart sensibel, dass die herkömmlichen Rechtsgrundlagen des Art. 6 DSGVO schlicht nicht ausreichen, um sie angemessen zu schützen. [Art. 9 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679) spannt daher einen vollkommen anderen, deutlich rigideren Schutzschild auf.
+
+Das Konzept unterscheidet scharf zwischen "gewöhnlichen" personenbezogenen Daten und solchen besonderer Kategorien. Die Norm statuiert für die Verarbeitung dieser sensiblen Fragmente in Absatz 1 erst einmal ein rigoroses und prinzipielles Verbot. 
+
+::: {.details}
+#### Besondere Kategorien personenbezogener Daten (Art. 9 Abs. 1 DSGVO)
+Zu diesen besonders geschützten Informationen zählen Daten, aus denen Folgendes hervorgeht:
+- Rassische und ethnische Herkunft
+- Politische Meinungen, religiöse oder weltanschauliche Überzeugungen
+- Gewerkschaftszugehörigkeit
+- Genetische Daten und biometrische Daten zur eindeutigen Identifizierung
+- Gesundheitsdaten sowie Daten zum Sexualleben oder zur sexuellen Orientierung
+:::
+
+Natürlich sind auch hier Ausnahmen vom Verbot der Verarbeitung vorgesehen – sie sind jedoch deutlich enger gefasst. Eine Verarbeitung ist nur ausnahmsweise dann gestattet, wenn ganz spezifische, noch strengere Erlaubnistatbestände aus Art. 9 Abs. 2 DSGVO herangezogen werden können. Dies wäre beispielsweise eine explizite, isolierte Einwilligung exakt für diese extrem sensiblen Daten oder die Erfüllung zwingender Vorschriften aus dem Arbeits- und Sozialrecht.
+
+Wenden Sie diese Systematik praktisch an und klassifizieren Sie die typischen Datenarten in die jeweilige rechtliche Schutzkategorie:
+
+::: {.widget}
+<iframe src="widgets/kapitel-02/widget-daten-klassifizierung.html"
+        width="100%" height="480px" frameborder="0"
+        title="Interaktive Klassifizierung sensibler Daten">
+</iframe>
+:::
+
+Wie sich diese Unterscheidung in der unternehmerischen Praxis äußern kann, zeigt das folgende Fallbeispiel.
+
+::: {.case-study}
+#### Fall: Das Tattoo-Studio und der Instagram-Account
+Ein angesagtes Tattoo-Studio lässt seine Kunden vor dem Stechen des Tattoos routinemäßig ein Formular unterschreiben. Inmitten eines langen Fließtextes auf Seite zwei verbirgt sich folgende Klausel: "Wir erheben mit dieser Erklärung Gesundheitsdaten von Ihnen (z. B. zu Infektionen), um das Tattoo sicher stechen zu können. Zudem fertigen wir im Anschluss Vorher-Nachher-Fotos des Werks für unseren Instagram-Kanal an."
+
+::: {.solution}
+**Lösung:** Hier offenbaren sich erhebliche rechtliche Mängel. Eine Tätowierung direkt auf der nackten Haut sowie die medizinische Abfrage von Gesundheitszuständen fällt in den Anwedungsbereich von Art. 9 DSGVO (Gesundheitsdaten). 
+
+Die pauschale, in einem Fließtext versteckte Einwilligung ohne klare optische und inhaltliche Trennung der völlig unterschiedlichen Zwecke (medizinisch-gesundheitliche Vorbereitung der Behandlung versus Social-Media-Werbung im Internet) verfehlt die grundlegenden Anforderungen an die Informiertheit und Bestimmtheit. Eine ausdrückliche, spezifisch getrennte Zustimmung exakt für diese sensiblen Gesundheitsdaten fehlt. Die Einwilligung in dieser undifferenzierten Form ist höchstwahrscheinlich vollumfänglich unwirksam.
+:::
+:::
+
+Das Datenschutzrecht fordert Sie kontinuierlich auf, Datenkategorien zu unterscheiden und die Architektur der Einwilligung entsprechend sauber, granular und präzise auszugestalten. Zielen Sie immer auf informierte Entscheidungen statt auf verschleierte Zustimmungsfallen.
+
+Die fundierte rechtliche Begründung einer Datenverarbeitung ist keine nebensächliche Formalie für Legal-Nerds, sondern das essenzielle Fundament, ohne das fast jedes digitale Geschäftsmodell zur juristischen Haftungsfalle wird.
+
+::: {.drag-exercise}
+Die Verarbeitung von sensiblen Daten, wie beispielsweise *Gesundheitsdaten*, unterliegt einem prinzipiellen Verbot gemäß *Art. 9 DSGVO*. Ausnahmen sind nur unter strengen Bedingungen möglich, etwa einer *ausdrücklichen* Einwilligung, die klar vom restlichen Text *abgehoben* erteilt werden muss.
+:::

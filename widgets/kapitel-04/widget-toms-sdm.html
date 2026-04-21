@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheitsmaßnahmen & Gewährleistungsziele SDM</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: 'Inter', sans-serif; background: #fff; color: #333; }
+        .container { max-width: 750px; margin: 0 auto; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .card { background: #fdfdfd; border: 2px solid #eee; border-radius: 8px; padding: 15px; text-align: left; cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden; }
+        .card:hover { border-color: #ff6a00; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card.active { border-color: #ff6a00; background: #fff0e6; }
+        .card-title { font-weight: bold; font-size: 1.1rem; margin-bottom: 8px; color: #ff6a00; }
+        .card-desc { font-size: 0.9rem; color: #555; }
+        
+        .measure-panel { margin-top: 30px; background: #333; color: white; border-radius: 8px; padding: 20px; text-align: left; min-height: 120px; display: flex; flex-direction: column; justify-content: center; }
+        .measure-title { font-size: 1.2rem; font-weight: bold; color: #ff6a00; margin-bottom: 10px; }
+        .measure-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px; }
+        .tag { background: rgba(255,106,0,0.2); border: 1px solid #ff6a00; color: #ffca99; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; }
+        .placeholder { text-align: center; color: #999; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p style="color: #666; font-size: 1.1rem; margin-bottom: 5px;">Das Standard-Datenschutzmodell (SDM)</p>
+        <h2 style="margin-top: 0;">Welche Maßnahme erfüllt welches Schutzziel?</h2>
+        <p style="font-size: 0.95rem; margin-bottom: 25px;">Klicken Sie auf ein Schutzziel, um typische technische und organisatorische Maßnahmen (TOMs) zu sehen.</p>
+        
+        <div class="grid">
+            <div class="card" onclick="show('vertraulichkeit', this)">
+                <div class="card-title">Vertraulichkeit</div>
+                <div class="card-desc">Kein unbefugter Zugriff auf Daten.</div>
+            </div>
+            <div class="card" onclick="show('integritaet', this)">
+                <div class="card-title">Integrität</div>
+                <div class="card-desc">Daten müssen unversehrt und richtig bleiben.</div>
+            </div>
+            <div class="card" onclick="show('verfuegbarkeit', this)">
+                <div class="card-title">Verfügbarkeit</div>
+                <div class="card-desc">Daten müssen bei Bedarf abrufbar sein.</div>
+            </div>
+            <div class="card" onclick="show('nichtverkettung', this)">
+                <div class="card-title">Nichtverkettung</div>
+                <div class="card-desc">Daten dürfen nicht unzulässig verknüpft werden.</div>
+            </div>
+        </div>
+
+        <div class="measure-panel">
+            <div id="placeholder" class="placeholder">Bitte wählen Sie ein Schutzziel aus.</div>
+            <div id="content" style="display: none;">
+                <div id="m-title" class="measure-title"></div>
+                <div id="m-tags" class="measure-tags"></div>
+                <div id="m-desc" style="line-height: 1.5;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            'vertraulichkeit': {
+                title: 'Maßnahmen zur Vertraulichkeit',
+                tags: ['Verschlüsselung', 'Passwortrichtlinien', 'Clean-Desk-Policy', 'VPN'],
+                desc: 'Die wichtigste Maßnahme ist die starke Verschlüsselung (End-to-End, Datenträgerverschlüsselung). Organistorisch helfen restriktive Berechtigungskonzepte (Need-to-know-Prinzip) und sichere Authentifizierungsverfahren (z.B. 2FA).'
+            },
+            'integritaet': {
+                title: 'Maßnahmen zur Integrität',
+                tags: ['Digitale Signaturen', 'Prüfsummen', 'Versionsverwaltung', 'Protokollierung'],
+                desc: 'Um Manipulationen oder Hardwarefehler zu erkennen, werden kryptografische Prüfsummen oder digitale Signaturen eingesetzt. Eingabeprüfungen und lückenlose Änderungs-Protokollierungen (Audit Trails) stellen sicher, dass Veränderungen nachvollziehbar bleiben.'
+            },
+            'verfuegbarkeit': {
+                title: 'Maßnahmen zur Verfügbarkeit',
+                tags: ['Backups', 'USV (Stromversorgung)', 'Redundanz', 'DDoS-Schutz'],
+                desc: 'Gegen Ransomware-Angriffe, Hardware-Defekte oder Stromausfälle helfen primär redundante Systeme (Cluster) und ein striktes Backup-Konzept (z.B. Offline-Backups). Auch Brandschutz und Schutz vor Naturkatastrophen im Rechenzentrum gehören hierzu.'
+            },
+            'nichtverkettung': {
+                title: 'Maßnahmen zur Nichtverkettung',
+                tags: ['Mandantenfähigkeit', 'Pseudonymisierung', 'Zweckbindung'],
+                desc: 'Daten, die für unterschiedliche Zwecke erhoben wurden (z.B. Patientenakte vs. Abrechnung), müssen technisch auf getrennten Systemen oder Datenbanken (Mandantenfähigkeit) gespeichert werden. Pseudonymisierung erschwert die unzulässige Profilbildung.'
+            }
+        };
+
+        function show(key, btn) {
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            
+            document.getElementById('placeholder').style.display = 'none';
+            const content = document.getElementById('content');
+            content.style.display = 'block';
+            content.style.animation = 'none';
+            content.offsetHeight; // trigger reflow
+            content.style.animation = 'fadeIn 0.3s';
+            
+            document.getElementById('m-title').innerText = data[key].title;
+            document.getElementById('m-desc').innerText = data[key].desc;
+            
+            const tagsHtml = data[key].tags.map(t => `<span class="tag">${t}</span>`).join('');
+            document.getElementById('m-tags').innerHTML = tagsHtml;
+        }
+    </script>
+</body>
+</html>

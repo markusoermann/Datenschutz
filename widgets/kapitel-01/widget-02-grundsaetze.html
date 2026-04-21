@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grundsätze der DSGVO (Art. 5)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            box-sizing: border-box;
+            background: #ffffff;
+            color: #333333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .principle-btn {
+            background: #f0f0f0;
+            color: #333;
+            border: 2px solid transparent;
+            padding: 15px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.2s;
+            height: 100%;
+        }
+        .principle-btn:hover {
+            background: #e0e0e0;
+        }
+        .principle-btn.active {
+            background: #fff;
+            color: #ff6a00;
+            border-color: #ff6a00;
+            box-shadow: 0 4px 6px rgba(255,106,0,0.1);
+        }
+        .info-panel {
+            background: #fcfcfc;
+            border-left: 5px solid #ff6a00;
+            padding: 20px;
+            border-radius: 4px;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .placeholder-text {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            width: 100%;
+        }
+        .principle-title {
+            color: #ff6a00;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid" id="button-grid">
+            <button class="principle-btn" onclick="showInfo(0)">Rechtmäßigkeit & Transparenz</button>
+            <button class="principle-btn" onclick="showInfo(1)">Zweckbindung</button>
+            <button class="principle-btn" onclick="showInfo(2)">Datenminimierung</button>
+            <button class="principle-btn" onclick="showInfo(3)">Richtigkeit</button>
+            <button class="principle-btn" onclick="showInfo(4)">Speicherbegrenzung</button>
+            <button class="principle-btn" onclick="showInfo(5)">Integrität & Vertraulichkeit</button>
+            <button class="principle-btn" onclick="showInfo(6)">Rechenschaftspflicht</button>
+        </div>
+        
+        <div class="info-panel" id="info-display">
+            <div class="placeholder-text">Klicken Sie auf einen Grundsatz, um Details zu erfahren.</div>
+        </div>
+    </div>
+    
+    <script>
+        const details = [
+            { t: "Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz", c: "Daten dürfen nur auf rechtmäßige Weise und nachvollziehbar für die betroffene Person verarbeitet werden. Keine verborgenen Absichten oder Manipulationen durch Dark Patterns." },
+            { t: "Zweckbindung", c: "Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben werden. Eine Weiterverarbeitung für unvereinbare Zwecke ist prinzipiell verboten." },
+            { t: "Datenminimierung", c: "Es dürfen nur so viele Daten erhoben werden, wie dem Zweck angemessen und absolut notwendig sind („Nicht so viel wie möglich“)." },
+            { t: "Richtigkeit", c: "Die Daten müssen sachlich richtig und auf dem neuesten Stand sein. Unrichtige Daten sind unverzüglich zu löschen oder zu berichtigen." },
+            { t: "Speicherbegrenzung", c: "Personenbezogene Daten dürfen nur so lange in einer Form gespeichert werden, die die Identifizierung ermöglicht, wie es der Zweck erfordert." },
+            { t: "Integrität und Vertraulichkeit", c: "Daten müssen so verarbeitet werden, dass eine angemessene Sicherheit (Schutz vor unbefugtem Zugriff, Verlust etc.) gewährleistet wird." },
+            { t: "Rechenschaftspflicht", c: "Der Verantwortliche ist für die Einhaltung sämtlicher Grundsätze zuständig. Er muss die Einhaltung jederzeit nachweisen können." }
+        ];
+
+        const buttons = document.querySelectorAll('.principle-btn');
+        const display = document.getElementById('info-display');
+
+        function showInfo(index) {
+            buttons.forEach(b => b.classList.remove('active'));
+            buttons[index].classList.add('active');
+            
+            const item = details[index];
+            display.innerHTML = `<div><span class="principle-title">${item.t}</span>${item.c}</div>`;
+        }
+    </script>
+</body>
+</html>
