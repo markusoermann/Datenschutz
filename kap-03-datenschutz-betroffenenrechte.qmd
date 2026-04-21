@@ -1,0 +1,117 @@
+---
+title: "Datenschutzrecht"
+subtitle: "Informationspflichten und Betroffenenrechte"
+date: last-modified
+lang: de
+
+# Autoren-Daten
+author:
+  - name: Prof. Dr. Markus Oermann
+    email: markus.oermann@thws.de
+    role: Dozent
+    affiliation: THWS FIW
+
+# Semester-Daten
+semester: "SoSe 26"
+course: "ELSI und Digitalisierung"
+version: "1.0"
+
+# --- Ausgabe-Formate ---
+format: handout-typst
+---
+
+## Transparenz durch Informationspflichten
+
+ Geheimnisvolles hat im Leben seinen Reiz, im Datenschutzrecht hingegen ist hochproblematisch. Wer personenbezogene Daten verarbeitet, muss die Karten auf den Tisch legen. Transparenz ist nicht bloß eine höfliche Geste, sondern eine hart sanktionierte Rechtspflicht, die den Betroffenen überhaupt erst in die Lage versetzt, seine Rechte geltend zu machen. 
+
+Das Transparenzgebot des Art. 5 Abs. 1 lit. a DSGVO fordert unmissverständlich, dass Datenverarbeitungen für die betroffenen Personen nachvollziehbar sein müssen. Um dieses hehre Ziel operativ sicherzustellen, statuiert die DSGVO ein engmaschiges Netz an Informationspflichten. Diese sind gemäß [Art. 12 Abs. 1 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679) in präziser, transparenter und verständlicher Form sowie in einfacher Sprache bereitzustellen. Juristisches Kauderwelsch in den AGB genügt den Anforderungen in der EU also ausdrücklich nicht.
+
+Die Systematik der DSGVO unterscheidet bei der Informationserteilung dogmatisch zwischen zwei grundlegenden Erhebungskonstellationen:
+
+::: {.flip-card}
+#### Direkterhebung (Art. 13 DSGVO)
+Die Daten werden unmittelbar bei der betroffenen Person erhoben (z. B. Ausfüllen eines Online-Formulars). Die Information muss zwingend zum Zeitpunkt der Erhebung erfolgen.
+:::
+
+::: {.flip-card}
+#### Dritterhebung (Art. 14 DSGVO)
+Die Daten stammen aus anderen Quellen (z. B. Adresskauf, Web-Scraping). Hier müssen zusätzlich die Datenquelle und die genaue Kategorie der verarbeiteten Daten mitgeteilt werden.
+:::
+
+Vergleichen Sie die inhaltlichen Unterschiede der Informationspflichten je nach Art der Datenerhebung im folgenden interaktiven Schaubild:
+
+::: {.widget}
+<iframe src="widgets/kapitel-03/widget-informationspflichten.html"
+        width="100%" height="450px" frameborder="0"
+        title="Interaktives Schaubild zu DSGVO Informationspflichten">
+</iframe>
+:::
+
+In der praktischen Umsetzung manifestieren sich diese Pflichten typischerweise in der allgegenwärtigen Datenschutzerklärung. Doch was gehört zwingend in dieses Dokument? Neben dem Namen und den Kontaktdaten des Verantwortlichen müssen die konkreten Zwecke und Rechtsgrundlagen der Verarbeitung offengelegt werden. Ebenso entscheidend sind die Speicherdauer (oder zumindest die Kriterien für deren Festlegung), potentielle Empfänger der Daten sowie etwaige Übermittlungen in Länder außerhalb der EU (sog. Drittländer). Nicht zuletzt bedarf es einer unmissverständlichen Aufklärung über die Betroffenenrechte und das Beschwerderecht bei der zuständigen Aufsichtsbehörde.
+
+::: {.details}
+#### Der Datenschutzbeauftragte in der Datenschutzerklärung
+Ein interessantes Detail aus der Praxis: Muss der Datenschutzbeauftragte eigentlich namentlich in der Datenschutzerklärung aufgeführt werden? Nein, befand der Bundesgerichtshof (BGH, Urt. v. 14.05.2024 - VI ZR 370/22 (https://www.dr-bahr.com/news/namentliche-nennung-des-datenschutzbeauftragten-nicht-zwingend-notwendig.html)). Es reicht aus, wenn ausreichende und leicht zugängliche Wege zur Kontaktaufnahme (wie eine Funktions-E-Mail-Adresse) zur Verfügung gestellt werden.
+:::
+
+Die Informationspflichten sind indes nicht uferlos. Sie entfallen beispielsweise dann, wenn die betroffene Person bereits über das entsprechende Wissen verfügt (Art. 13 Abs. 4 DSGVO). Auch der nationale Gesetzgeber kann Ausnahmen normieren. Das Bundesdatenschutzgesetz (BDSG) greift diese Ermächtigung zur Ausnahmeregelung auf und lässt Informationspflichten entfallen, wenn zwingende Geheimhaltungsinteressen, der Quellenschutz von Journalisten oder Belange der öffentlichen Sicherheit entgegenstehen (§§ 29, 32, 33 BDSG).
+
+::: {.drag-exercise}
+Werden Daten unmittelbar bei der Person erhoben, greift die *Direkterhebung* nach Art. 13 DSGVO. Fließen die Daten aus fremden Quellen zu, spricht man von der *Dritterhebung* gemäß Art. 14 DSGVO, wobei hier zwingend die *Quelle* der Daten mitgeteilt werden muss.
+:::
+
+## Betroffenenrechte
+
+Wo Transparenz herrscht, wachsen auch die Kontrollmöglichkeiten. Sobald Daten verarbeitet werden, rüstet die DSGVO die betroffene Person mit einem beachtlichen juristischen Werkzeugkasten an Abwehr- und Kontrollrechten aus (Art. 15 bis 21 DSGVO). 
+
+Ist ein Datensatz inkorrekt, greift [Art. 16 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679) mit dem Recht auf unverzügliche Berichtigung. Sind die Zwecke der Verarbeitung erfüllt oder widerruft die Person ihre zuvor erteilte Einwilligung, aktiviert sich das viel zitierte „Recht auf Vergessenwerden“ (Recht auf Löschung) nach Art. 17 DSGVO. Die Artikel 18 und 20 flankieren dieses Arsenal mit dem Recht auf Einschränkung der Verarbeitung sowie dem Recht auf Datenübertragbarkeit, welches der drohenden Monopolisierung von Nutzerdaten durch Tech-Giganten entgegenwirken soll. In der Praxis ist dieses Recht allerdings bisher kaum wirksa.
+
+Besondere strategische Relevanz entfaltet das Recht auf Widerspruch gemäß Art. 21 DSGVO. 
+
+::: {.case-study}
+#### Fall: KI-Training durch Tech-Giganten
+Social-Media-Konzerne wie Meta (Facebook, Instagram) greifen für das Training ihrer hauseigenen generativen KI-Modelle zunehmend auf die massenhaft verfügbaren öffentlichen Beiträge, Fotos und Kommentare ihrer Nutzerschaft zurück. 
+
+::: {.solution}
+**Lösung:** Hier greift das Recht auf Widerspruch aus Art. 21 DSGVO. Nutzerinnen und Nutzer können der Verwendung ihrer datenschutzrechtlich relevanten Posts für das KI-Training widersprechen. Das Unternehmen muss die Verarbeitung dann einstellen, es sei denn, es kann zwingende schutzwürdige Gründe nachweisen, welche die Interessen der Betroffenen überwiegen – eine Hürde, die bei massenhaftem KI-Training schwerlich pro Einzelperson zu nehmen ist.
+:::
+:::
+
+## Das Auskunftsrecht als Türöffner (Art. 15 DSGVO)
+
+Ein scharfes Schwert im Repertoire des Betroffenen ist das Auskunftsrecht ([Art. 15 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679)). Es dient als unerlässlicher Türöffner, um die Rechtmäßigkeit einer Verarbeitung überhaupt überprüfen zu können. Wer nicht weiß, was über ihn gespeichert ist, kann auch nicht z.B. die Löschung verlangen. Das Recht umfasst die Bestätigung, ob Daten verarbeitet werden, sowie eine detaillierte Auskunft über Zwecke, Empfänger und Speicherdauer.
+
+Die Brisanz des Auskunftsanspruchs zeigt sich in der extrem weiten Auslegung durch die Rechtsprechung. Der Auskunftsanspruch ist nicht auf simple Stammdaten beschränkt. Der Bundesgerichtshof (BGH) zieht den Kreis hier denkbar weit: Auch interne Vermerke, Telefonnotizen, Gesprächsprotokolle und E-Mails können personenbezogene Daten enthalten und sind dann vollumfänglich auskunftspflichtig. 
+
+Zudem ist das Motiv für das Auskunftsersuchen in der Regel unbedeutend. 
+
+::: {.flip-card}
+#### Fehlendes Rechtsschutzbedürfnis beim Auskunftsanspruch?
+Das Auskunftsrecht setzt kein spezifisches "Rechtsschutzbedürfnis" voraus. Selbst wenn das primäre Ziel des Betroffenen völlig datenschutzfremd ist (z. B. Vorbereitung einer arbeitsrechtlichen Klage oder Überprüfung von Provisionsabrechnungen), steht dies dem Anspruch nach herrschender Rechtsprechung grundsätzlich nicht entgegen.
+:::
+
+Darüber hinaus sichert Art. 15 Abs. 3 DSGVO das Recht auf eine kostenlose Erstkopie der verarbeiteten personenbezogenen Daten. Der BGH hat auch hier klargestellt, dass dies durchaus die Herausgabe tatsächlicher Dokumentenkopien (wie von Briefen oder E-Mails) bedeuten kann, sofern dies zum Verständnis der Daten erforderlich ist. 
+
+Diese weitreichenden Ansprüche finden ihre Grenze erst dort, wo sie mit den Rechten und Freiheiten anderer Personen kollidieren (Art. 15 Abs. 4 DSGVO), etwa wenn berechtigte Geschäftsgeheimnisse tangiert sind. Auch bei exzessiven – also offenkundig unbegründeten oder häufig wiederholten – Anträgen kann der Verantwortliche die Auskunft verweigern oder ein angemessenes Entgelt verlangen.
+
+::: {.case-study}
+#### Fall: Die misslungene Pflichtfachprüfung
+Ein Jura-Student ist bei der staatlichen Pflichtfachprüfung in Nordrhein-Westfalen durchgefallen. Um Ansatzpunkte für eine Prüfungsanfechtung zu finden, fordert er vom zuständigen Prüfungsamt unter Berufung auf Art. 15 DSGVO die unentgeltliche Übersendung einer Kopie seiner gesamten Klausuren (stolze 348 Seiten) – inklusive der handschriftlichen Gutachten und Randbemerkungen der Prüfer. Das Amt weigert sich aufgrund des Umfangs und der Rechte der Prüfer.
+
+::: {.solution}
+**Lösung:** Der Anspruch nach Art. 15 DSGVO besteht tatsächlich vollumfänglich. Die schriftlichen Aufsichtsarbeiten des Studenten sowie die darauf bezogenen Prüfungsgutachten der Korrektoren stellen personenbezogene Daten dar. Auch die Rechte Dritter (Art. 15 Abs. 4 DSGVO) – hier die der Prüfer – stehen der Herausgabe nicht entgegen, da Prüfer ihre Korrekturanmerkungen ohnehin in dem Bewusstsein anfertigen, dass sie dem Prüfling im Rahmen der Akteneinsicht zugänglich gemacht werden müssen. Das Bundesverwaltungsgericht (BVerwG) gab dem klagenden Studenten in letzter Instanz Recht. Das Datenschutzrecht hebelt hier faktisch die strengen Regularien des Verwaltungsverfahrensrechts aus.
+:::
+:::
+
+Das Auskunftsrecht entwickelt sich in der Praxis zunehmend zur universellen Allzweckwaffe. Für Unternehmen und Behörden bedeutet das einen enormen organisatorischen Druck, Anfragen binnen des gesetzlichen Monats beauskunften zu können. Wer IT-Systeme nicht so baut, dass sie auf Knopfdruck vollständige Datenkopien auswerfen, manövriert sich unweigerlich in ein Compliance-Risiko.
+
+::: {.quick-check}
+Welche Aussage zum Auskunftsrecht nach Art. 15 DSGVO ist korrekt?
+
+- Das Auskunftsrecht kann vom Verantwortlichen verweigert werden, wenn der Betroffene die Informationen nutzen will, um eine arbeitsrechtliche Kündigungsschutzklage vorzubereiten.
+
+- Der Auskunftsanspruch beschränkt sich auf strukturierte Stammdaten wie Name, Anschrift und Geburtsdatum in einer Datenbank.
+
+- **Auch handschriftliche Vermerke, E-Mails und Prüfungsgutachten können einen Anspruch auf Herausgabe einer Kopie begründen, solange die Rechte anderer nicht überwiegen.**
+
+:::

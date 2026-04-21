@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personenbezug-Checker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #333333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .data-btn {
+            background: #f4f6f8;
+            border: 1px solid #cdd5df;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            color: #333;
+        }
+        .data-btn:hover {
+            background: #e2e8f0;
+        }
+        .data-btn.selected {
+            background: #ff6a00;
+            color: white;
+            border-color: #cc5500;
+        }
+        .result-card {
+            display: none;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 6px solid #ccc;
+            background: #fefefe;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            animation: fadeIn 0.3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .status-yes { background: #e6fced; color: #0d822a; }
+        .status-no { background: #fcebeb; color: #c91a1a; }
+        .status-maybe { background: #fff3e0; color: #e65100; }
+        
+        .result-title {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+        }
+        .result-desc {
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Wählen Sie eine Datenart:</h3>
+        <div class="selector" id="btn-container">
+            <button class="data-btn" onclick="checkData('name')">Name & Adresse</button>
+            <button class="data-btn" onclick="checkData('ip')">IP-Adresse</button>
+            <button class="data-btn" onclick="checkData('machine')">Kühlschrank-Temperatur</button>
+            <button class="data-btn" onclick="checkData('deceased')">Daten von Verstorbenen</button>
+            <button class="data-btn" onclick="checkData('fetus')">Ultraschallbild Fötus</button>
+            <button class="data-btn" onclick="checkData('anon')">Anonymisierte Daten</button>
+        </div>
+        
+        <div class="result-card" id="resultCard">
+            <div class="status-badge" id="statusBadge">Status</div>
+            <h2 class="result-title" id="resultTitle">Titel</h2>
+            <p class="result-desc" id="resultDesc">Beschreibung</p>
+        </div>
+    </div>
+    
+    <script>
+        const scenarios = {
+            'name': {
+                s: 'yes',
+                badge: 'PERSONENBEZOGEN',
+                t: 'Name, Adresse, Kontodaten',
+                d: 'Der klassische Fall nach Art. 4 Nr. 1 DSGVO. Die Person ist direkt über diese Parameter identifizierbar. Die DSGVO ist voll anwendbar.'
+            },
+            'ip': {
+                s: 'yes',
+                badge: 'PERSONENBEZOGEN (MEISTENS)',
+                t: 'Dynamische IP-Adresse',
+                d: 'Sofern theoretisch die Möglichkeit besteht, über Dritte (z.B. den Provider) eine Zuordnung zur natürlichen Person vorzunehmen, gilt auch die IP-Adresse als personenbezogenes Datum.'
+            },
+            'machine': {
+                s: 'no',
+                badge: 'NICHT PERSONENBEZOGEN',
+                t: 'Kühlschrank-Temperatur / Maschinendaten',
+                d: 'Es handelt sich um reine Sachdaten. Solange diese nicht mit einer Person (z.B. Verhalten des Nutzers) verknüpft werden, entfällt der Schutz der DSGVO.'
+            },
+            'deceased': {
+                s: 'no',
+                badge: 'NICHT PERSONENBEZOGEN',
+                t: 'Daten von Verstorbenen',
+                d: 'Die DSGVO schützt ausdrücklich nur „lebende natürliche Personen“ (ErwG 27). Nach dem Tod erlöschen die DSGVO-Rechte. (Ausnahmen durch nationales Recht möglich).'
+            },
+            'fetus': {
+                s: 'maybe',
+                badge: 'STRITTIG / MITTELBAR',
+                t: 'Ultraschallbild Fötus',
+                d: 'Ein Fötus ist juristisch noch keine geborene natürliche Person und damit nicht voll rechtsfähig. Das Bild stellt aber in der Regel ein Gesundheitsdatum der werdenden Mutter dar und ist somit als derenDatum geschützt.'
+            },
+            'anon': {
+                s: 'no',
+                badge: 'NICHT PERSONENBEZOGEN',
+                t: 'Echt anonymisierte Daten',
+                d: 'Sind Daten so verändert, dass ohne unverhältnismäßigen Aufwand kein Bezug mehr zu einer Person hergestellt werden kann (echte Anonymisierung), fällt sie aus dem Geltungsbereich der DSGVO. Vorsicht: Dies ist von der Pseudonymisierung zu unterscheiden!'
+            }
+        };
+
+        const buttons = document.querySelectorAll('.data-btn');
+        const card = document.getElementById('resultCard');
+        const badge = document.getElementById('statusBadge');
+        const title = document.getElementById('resultTitle');
+        const desc = document.getElementById('resultDesc');
+
+        function checkData(key) {
+            // Update buttons
+            buttons.forEach(b => b.classList.remove('selected'));
+            event.target.classList.add('selected');
+
+            // Update card
+            const data = scenarios[key];
+            
+            card.style.display = 'block';
+            card.style.borderLeftColor = 
+                data.s === 'yes' ? '#0d822a' : 
+                (data.s === 'no' ? '#c91a1a' : '#e65100');
+                
+            badge.className = 'status-badge ' + 'status-' + data.s;
+            badge.textContent = data.badge;
+            title.textContent = data.t;
+            desc.textContent = data.d;
+        }
+    </script>
+</body>
+</html>
