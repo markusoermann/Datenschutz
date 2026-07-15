@@ -10,10 +10,10 @@ Das Repository umfasst vier Kapitel, die den Semesterverlauf abbilden:
 
 | Kapitel | Thema | Quelldatei |
 |---------|-------|------------|
-| 1 | Einführung und Grundfragen | [kap-01-datenschutz-einfuehrung.qmd](kap-01-datenschutz-einfuehrung.qmd) |
-| 2 | Rechtsgrundlagen der Datenverarbeitung | [kap-02-datenschutz-rechtsgrundlagen.qmd](kap-02-datenschutz-rechtsgrundlagen.qmd) |
-| 3 | Informationspflichten und Betroffenenrechte | [kap-03-datenschutz-betroffenenrechte.qmd](kap-03-datenschutz-betroffenenrechte.qmd) |
-| 4 | Technik, Organisation und Durchsetzung | [kap-04-datenschutz-technik-organisation-durchsetzung.qmd](kap-04-datenschutz-technik-organisation-durchsetzung.qmd) |
+| 1 | Einführung und Grundfragen | [01_datenschutz_einfuehrung.qmd](01_datenschutz_einfuehrung.qmd) |
+| 2 | Rechtsgrundlagen der Datenverarbeitung | [02_datenschutz_rechtsgrundlagen.qmd](02_datenschutz_rechtsgrundlagen.qmd) |
+| 3 | Informationspflichten und Betroffenenrechte | [03_datenschutz_betroffenenrechte.qmd](03_datenschutz_betroffenenrechte.qmd) |
+| 4 | Technik, Organisation und Durchsetzung | [04_datenschutz_technik_organisation_durchsetzung.qmd](04_datenschutz_technik_organisation_durchsetzung.qmd) |
 
 ## 🛠 Interaktive Elemente (Widgets)
 
