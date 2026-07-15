@@ -1,0 +1,78 @@
+---
+title: "Datenschutzrecht"
+subtitle: "Kursstartseite & Inhaltsverzeichnis"
+date: last-modified
+lang: de
+toc: false
+number-sections: false
+
+# Autoren-Daten
+author:
+  - name: Prof. Dr. Markus Oermann
+    email: markus.oermann@thws.de
+    role: Dozent
+    affiliation: THWS FIW
+
+# Semester-Daten
+semester: "SoSe 26"
+course: "ELSI und Digitalisierung"
+version: "1.0"
+
+# --- Ausgabe-Formate ---
+format: moodle-html
+---
+
+Willkommen bei **Datenschutzrecht**, einem Modul des Studiengangs Digitale Gesellschaft (Bachelor of Science) an der THWS. In vier Lerneinheiten arbeiten wir uns von den historischen und dogmatischen Grundlagen der DSGVO über die Rechtsgrundlagen der Datenverarbeitung und die Rechte der Betroffenen bis zu den technisch-organisatorischen Pflichten und der behördlichen wie zivilrechtlichen Durchsetzung vor. Vorkenntnisse im Datenschutzrecht werden nicht vorausgesetzt; vorausgesetzt wird die Bereitschaft, sich mit den Grundnormen der DSGVO an konkreten Fällen aus der Praxis auseinanderzusetzen.
+
+Jede Einheit unten ist ein eigenständiges, interaktives Skript: Lesen Sie es im Browser, arbeiten Sie die eingebetteten Quick-Checks, Fallstudien und Widgets durch, und nutzen Sie die im Text verlinkten Primärquellen (Normen, Urteile) für die Vertiefung.
+
+## Kursdaten
+
+| | |
+|---|---|
+| **Studiengang** | Digitale Gesellschaft (B.Sc.), THWS FIW |
+| **Modul** | ELSI und Digitalisierung |
+| **Semester** | Sommersemester 2026 |
+| **Dozent** | Prof. Dr. iur. Markus Oermann, M.A. (THWS FIW) |
+| **Format** | 4 Lerneinheiten, Single Source Publishing (interaktives Skript + PDF) |
+| **Sprache** | Deutsch |
+
+## So nutzen Sie diese Seite
+
+- **4 chronologische Lerneinheiten** (unten), jede ein eigenständiges Quarto-Skript entlang des Semesterverlaufs.
+- **Interaktive Elemente** sind direkt im Text eingebettet: Flip-Cards für Definitionen, Quick-Checks zur Selbstkontrolle, Fallstudien, Drag-&-Drop-Übungen und Widgets, mit denen Sie datenschutzrechtliche Mechanismen selbst durchspielen können.
+- **Quellen.** Normen und Urteile sind direkt im Fließtext verlinkt (DSGVO, BDSG, Rechtsprechung von BVerfG, BGH und EuGH).
+
+## Inhaltsverzeichnis
+
+### Teil I · Grundlagen
+
+Das dogmatische Fundament des Datenschutzrechts: Abgrenzung zur Datensicherheit, historische Herleitung aus dem Volkszählungsurteil, Mehrebenensystem sowie Anwendungsbereich und Grundsätze der DSGVO.
+
+| Nr | Einheit | Was Sie lernen | Reader |
+|----|------|------|------|
+| 1 | [Einführung und Grundfragen](01_datenschutz_einfuehrung.html) | Datenschutz vs. Datensicherheit, Volkszählungsurteil & informationelle Selbstbestimmung, Mehrebenensystem (DSGVO/BDSG/Landesrecht), räumlicher & sachlicher Anwendungsbereich (Art. 2, 3 DSGVO), personenbezogene Daten & Verarbeitung (Art. 4 DSGVO), Grundsätze der Verarbeitung (Art. 5 DSGVO) | [PDF](01_datenschutz_einfuehrung.pdf) |
+
+### Teil II · Rechtsgrundlagen & Betroffenenrechte
+
+Wann eine Verarbeitung überhaupt zulässig ist und welche Ansprüche Betroffenen zustehen: vom Verbot mit Erlaubnisvorbehalt über die Einwilligung bis zu Informationspflichten und dem Katalog der Betroffenenrechte.
+
+| Nr | Einheit | Was Sie lernen | Reader |
+|----|------|------|------|
+| 2 | [Rechtsgrundlagen der Datenverarbeitung](02_datenschutz_rechtsgrundlagen.html) | Verbot mit Erlaubnisvorbehalt, Erlaubnistatbestände des Art. 6 DSGVO, Wirksamkeitsvoraussetzungen der Einwilligung (Art. 7 DSGVO), besondere Kategorien personenbezogener Daten (Art. 9 DSGVO) | [PDF](02_datenschutz_rechtsgrundlagen.pdf) |
+| 3 | [Informationspflichten und Betroffenenrechte](03_datenschutz_betroffenenrechte.html) | Informationspflichten bei Direkt- und Dritterhebung (Art. 12–14 DSGVO), Pflichtangaben der Datenschutzerklärung, Betroffenenrechte auf Berichtigung, Löschung, Einschränkung, Übertragbarkeit und Widerspruch (Art. 16–21 DSGVO), Auskunftsrecht als Türöffner (Art. 15 DSGVO) | [PDF](03_datenschutz_betroffenenrechte.pdf) |
+
+### Teil III · Technik, Organisation und Durchsetzung
+
+Wie Datenschutz technisch-organisatorisch umgesetzt und im Ernstfall durchgesetzt wird: TOMs und Privacy by Design, Dokumentations- und Meldepflichten sowie das Sanktions- und Haftungsregime der DSGVO.
+
+| Nr | Einheit | Was Sie lernen | Reader |
+|----|------|------|------|
+| 4 | [Technik, Organisation und Durchsetzung](04_datenschutz_technik_organisation_durchsetzung.html) | Technische und organisatorische Maßnahmen (Art. 32 DSGVO), Stand der Technik & Standard-Datenschutzmodell, Privacy by Design/Default (Art. 25 DSGVO), Dokumentations- und Meldepflichten (VvT, DSFA, Breach-Meldung), Datenschutzbeauftragter (Art. 37 DSGVO, § 38 BDSG), Bußgelder (Art. 83 DSGVO) und Schadensersatz (Art. 82 DSGVO) | [PDF](04_datenschutz_technik_organisation_durchsetzung.pdf) |
+
+## Autor
+
+**Prof. Dr. iur. Markus Oermann, M.A.**
+Fakultät Informatik und Wirtschaftsinformatik
+Technische Hochschule Würzburg-Schweinfurt (THWS)
+[markus.oermann@thws.de](mailto:markus.oermann@thws.de)
