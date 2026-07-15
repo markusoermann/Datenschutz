@@ -70,7 +70,7 @@ Wie Datenschutz technisch-organisatorisch umgesetzt und im Ernstfall durchgesetz
 |----|------|------|------|
 | 4 | [Technik, Organisation und Durchsetzung](04_datenschutz_technik_organisation_durchsetzung.html) | Technische und organisatorische Maßnahmen (Art. 32 DSGVO), Stand der Technik & Standard-Datenschutzmodell, Privacy by Design/Default (Art. 25 DSGVO), Dokumentations- und Meldepflichten (VvT, DSFA, Breach-Meldung), Datenschutzbeauftragter (Art. 37 DSGVO, § 38 BDSG), Bußgelder (Art. 83 DSGVO) und Schadensersatz (Art. 82 DSGVO) | [PDF](04_datenschutz_technik_organisation_durchsetzung.pdf) |
 
-## Autor
+## Dozent
 
 **Prof. Dr. iur. Markus Oermann, M.A.**
 Fakultät Informatik und Wirtschaftsinformatik
