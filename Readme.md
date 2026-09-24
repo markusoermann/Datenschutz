@@ -1,5 +1,7 @@
 # Datenschutzrecht: Materialien für die Lehrveranstaltung
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22932605.svg)](https://doi.org/10.5281/zenodo.22932605)
+
 Herzlich willkommen im Repository für das Modul **Datenschutzrecht** im Studiengang Digitale Gesellschaft (Bachelor of Science) an der Technischen Hochschule Würzburg-Schweinfurt (THWS). Alle Infos zum Studiengang finden sich unter: https://fiw.thws.de/studium/bachelor-digitale-gesellschaft-bdgd/. 
 
 Dieses Projekt nutzt einen modernen **Single-Source-Publishing-Ansatz** auf Basis von **Quarto**. Aus den hier vorliegenden Markdown-Quelldateien (`.qmd`) werden sowohl interaktive Lernmodule für Moodle als auch statische PDF-Skripte generiert.
@@ -38,6 +40,27 @@ Die Widgets befinden sich im Verzeichnis `/widgets`, gegliedert nach Kapiteln:
 - **Skills für Gemini/Claude:** https://github.com/c-kraus/claude-code-skills - Mit großem Dank an Prof. Dr. Christian Kraus!
 - **Output-Formate:** `moodle-html` (via THWS-Erweiterung), `pdf`
 - **Widgets:** Vanilla HTML5, CSS3 und JavaScript (Inter UI Font-Stack)
+
+## 📌 Zitation & DOI
+
+Jedes Release dieses Repositories wird auf Zenodo archiviert und erhält eine zitierfähige DOI. Der Badge oben verweist auf die *Concept-DOI*, die immer auf die neueste Version auflöst.
+
+- **Concept-DOI (alle Versionen):** [10.5281/zenodo.22932605](https://doi.org/10.5281/zenodo.22932605)
+- **Diese Version (SoSe 26, v1.0.0):** [10.5281/zenodo.22932606](https://doi.org/10.5281/zenodo.22932606)
+
+> Oermann, M. (2026). *Datenschutzrecht: Kursmaterialien* (Version 1.0.0) [Lehrmaterial]. Zenodo. https://doi.org/10.5281/zenodo.22932605
+
+```bibtex
+@misc{oermann_datenschutz_2026,
+  author       = {Oermann, Markus},
+  title        = {Datenschutzrecht: Kursmaterialien},
+  year         = {2026},
+  version      = {1.0.0},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22932605},
+  url          = {https://doi.org/10.5281/zenodo.22932605}
+}
+```
 
 ## ✍️ Autor
 
